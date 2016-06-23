@@ -1,0 +1,1 @@
+<a href="http://www.icq.com/whitepages/wwp.php?uin=$row[icq]" target="_blank"><img src="http://web.icq.com/whitepages/online?icq=$row[icq]&amp;img=5" border="0" alt="ICQ" title="$LANG[AltICQ]"></a>&nbsp;

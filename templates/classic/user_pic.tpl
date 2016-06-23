@@ -1,0 +1,1 @@
+<a href="$GB_PG[base_url]/$GB_UPLOAD/$row[p_filename]" target="_blank" onclick="return hs.expand(this)" class="highslide"><img src="$GB_PG[base_url]/$GB_UPLOAD/$row[p_filename2]" style="float:left;margin-right:3px;" alt="($id)" border="0" $new_img_size[2]></a>

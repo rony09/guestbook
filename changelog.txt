@@ -1,0 +1,797 @@
+Changelog for 1.25
+
+Fixed - Should work with PHP 7 now
+Fixed - Textarea content no longer censored when previewing
+Fixed - Database connection errors now correctly explained
+Fixed - Installer will display database connection errors
+Fixed - Installer was hard coded to use mysql file
+Fixed - captcha.php was hardcoded to use mysql.class.php
+Fixed - Smileys not shown in admin entries if disabled
+
+------------------------------------------------
+
+Changelog for 1.24
+
+Fixed - Comment now uses anti bot test text if question and answer is used
+Fixed - Cookie login not working for some users
+Fixed - Some users were getting error of Database has gone away
+
+------------------------------------------------
+
+Changelog for 1.23
+
+Fixed - SFS check not returning error on comments
+Fixed - Admin area not using chosen database functions
+
+Added - More domains to bad list
+Added - String escaping when saving changes in admin for security and bug fixing
+Added - Ability to select all entries on admin page in one click
+
+Removed - asianet.co.th from bad hosts list as it was blocking legitimate users
+
+Some stuff I've forgotten 
+
+------------------------------------------------
+
+Changelog for 1.22
+
+Fixed - User pics not being deleted with post
+Fixed - Bad word checking was case sensitive
+Fixed - Posts from Chrome on Android were showing as Chrome not Android
+Fixed - Updated YouTube AGCode to support https urls
+
+Changed - Space for name, email and URL increased to 150 to allow for non-western characters
+Changed - Now just uses remote_addr for the posters IP for security and consistency
+
+Added - Location now has a globe image that links to Google map of the location
+Added - Support for iPad in browser detection
+Added - Support for URLs that use non-Latin characters 
+
+------------------------------------------------
+
+Changelog for 1.21
+
+Fixed - Logout in admin was not deleting your cookie
+Fixed - Seeing \n or \r\n in email notifications.
+Fixed - Regression meaning thumbnails were displayed wrong size
+Fixed - Image not showing for Opera browser
+
+Changed - .htaccess now has more entries for better blocking on supporting servers
+Changed - StopForumSpam address now uses their load balancer
+
+------------------------------------------------
+
+Changelog for 1.20.4
+
+Fixed - MySQL error if ICQ disabled or not submitted
+Fixed - Entries not showing. I think browser detect was the issue.
+
+------------------------------------------------
+
+Changelog for 1.20.3
+
+Fixed - New Opera detection resulted in preg_match error
+
+------------------------------------------------
+
+Changelog for 1.20.2
+
+Fixed - SFS not working when both email and IP being checked and using fallback method
+Fixed - Error on saving security settings if ' used in bot test question or answer
+Fixed - Error message on some servers about undefined constant IS_INSTALLER
+Fixed - Image Upload setting would always say directories were unwriteable
+Fixed - Uploaded images not showing in easy admin
+Fixed - Flash AGcode not working with youtu.be urls
+Fixed - Slashes being needlessly stripped from email body
+Fixed - mysql.class.php always being used even if mysqli requested
+
+Changed - Faster deletion of redundant files in tmp folder
+
+Added - Detection for Opera 15 and IE 11 useragents due to massive changes in useragents
+Added - lazTop ID to top div so you can style the sign and navigation links
+
+------------------------------------------------
+
+Changelog for 1.20.1
+
+Fixed - Entry being blocked when SFS check failed
+Fixed - SFS check unable to connect on some server
+Fixed - 'mysqli_insert_id() expects parameter 1 to be mysqli' error
+
+Changed - Smileybox now has a maximum height of 150px. Scrollbar will show if needed
+
+Removed - Some redundant code that served no purpose so god knows why I even put it in there
+
+------------------------------------------------
+
+Changelog for 1.20
+
+Changed - Returned to mysql_* functions as default with option to use mysqli_* 
+
+Added - IP addresses blocked by SFS are now cached locally for 24 hours to ease load on SFS
+Added - More server IP blocks to the htaccess
+Added - Header checks now checks posters hostname against list of bad hosts/server
+Added - If SFS check fails then entry is marked for moderation (unaccepted)
+Added - If honeypot filled in script will pause to slow down some bots
+
+------------------------------------------------
+
+Changelog for 1.19.1
+
+Fixed - Regression that caused homepage url not to be saved
+
+------------------------------------------------
+
+Changelog for 1.19
+
+Fixed - split function deprecated as of PHP 5.3 now using explode
+Fixed - mysql functions deprecated as of PHP 5.5 switched to mysqli
+Fixed - Links in RSS feed point to wrong location if using include file
+Fixed - Honeypot was not working
+Fixed - Timezone not set error in blocks.php
+
+Added - Can now specify a banned IP range as x.x.x.x-y.y.y.y
+Added - index, addentry and comment pages will forward to included page or block if set to
+Added - Stop Forum Spam check now also checks the email address
+Added - Donate link to admin menu
+Added - More spam server ip blocks to .htaccess
+
+Changed - Smiley box now slides in to view above the message textarea
+Changed - Comments now slide in to view if set to hidden
+Changed - Image directory names are now hardcoded due to some CMS wiping variables
+Changed - Updated the .htaccess to add new IP ranges
+
+------------------------------------------------
+
+Changelog for 1.18.7
+
+Fixed - Error message when saving security section of admin
+Fixed - Label issues in panel_main.php
+
+------------------------------------------------
+
+Changelog for 1.18.6
+
+Changed - Spam block stats now gives a detailed breakdown
+Changed - Captcha no longer does a header check if enabled
+Changed - Admin menu is no longer fixed to make using it on a phone easier
+Changed - Captcha URL is now obfuscated in the HTML
+
+Added - External file for displaying the block count on your website
+
+------------------------------------------------
+
+Changelog for 1.18
+
+Fixed - admin.php would cause an infinite loop on some servers
+Fixed - preg_replace warning when using regex with empty censored words list
+Fixed - Exploit in SolveMedia that allowed it to be bypassed
+Fixed - Q&A bot test would return empty if Solve Media was enabled
+
+Changed - Removed clear CSS from body.tpl due to layout inconsistencies
+Changed - Moved Base URL and Guestbook URL settings to top of general and 
+          marked as important
+Changed - Added IP address of poster to admin emails
+Changed - Stylised admin emails slightly
+Changed - Rewrote captcha options to make them make sense
+Changed - SolveMedia now requires the user to have JavaScript enabled
+Changed - Server time offet is now your timezone rather than the difference
+Changed - Built in CAPTCHA now requires JS to show it
+Changed - Moved comment enabling from security to fields
+
+Added - AGCode now supports YouTube's short urls
+Added - Thank you message is now parsed for AGCode before being sent
+Added - Option to have posters IP address checked against Stop Forum Spam
+Added - Honeypot to trap some spambots
+
+------------------------------------------------
+
+Changelog for 1.17.1
+
+Fixed - Admin would kick you out when you tried to save any changes
+
+------------------------------------------------
+
+Changelog for 1.17
+
+Fixed - Undefined entity error when checking HTML with Gravatars enabled
+Fixed - Error message due to log writing when using SMTP failed
+Fixed - Use external css setting not being remembered
+Fixed - Issue with CSS of navigation under sign guestbook link
+Fixed - Entries with images in admin were still using EnlargeIt code
+Fixed - Division by 0 error in statistics when you had no comments
+
+Changed - Major rewrite of admin.php to tighten up security
+Changed - Uploaded files that fail image check are instantly deleted
+Changed - Removed PHP Info from admin
+Changed - Dimensions of YouTube videos is now hard coded in
+Changed - Redesigned admin again
+Changed - Rewrote bad word censoring to be faster
+Changed - Better checking of submitted homepage urls
+
+Added - Link to forums in admin
+Added - Extra header check to try and stop new wave of spam
+
+------------------------------------------------
+
+Changelog for 1.16
+
+Fixed - Layout issue in IE
+Fixed - Bad naming of inputs in comment edit form
+
+Changed - Switched from EnlargeIt! to Highslide for lightbox
+
+Added - Ability to use an SMTP server for sending emails (basic)
+Added - Option to disable blocked post count
+Added - Ability to reset blocked post count to 0
+Added - Can now use Solve Media captcha instead of the built in one
+Added - Added support for CIDR format in IP banning
+
+------------------------------------------------
+
+Changelog for 1.15
+
+Fixed - Finally converted all the deprecated ereg to preg_match
+Fixed - $COMGRAVATAR was not set if no email address for the comment
+
+Added - Statistics of entries/comments to admin
+Added - Now keeps a count of all blocked entries and comments
+
+------------------------------------------------
+
+Changelog for 1.14
+
+Fixed - Charset not being used in success_header.tpl
+Fixed - Length of message not being checked in comments
+Fixed - Guestbook should work when included in a CMS such as Joomla
+Fixed - Border Radius CSS to final specification
+
+Changed - If using Smart time the real time will appear as a tooltip
+Changed - Styling of success/error messages in admin
+Changed - Smart time now shows the day name if within last 7 days
+Changed - A page number will always been shown even if it's just 1
+Changed - body.tpl and form.tpl partly use divs for styling
+Changed - Can now style the font and number colour at top of guestbook
+Changed - error.tpl to use your chosen font size
+Changed - JavaScript to use browser native function
+
+Added - Styling to Submit and Reset buttons in admin
+Added - Option to ban ip and unaccept to comments
+Added - Commenters can now leave their email address
+Added - Added Android as recognised browser
+
+------------------------------------------------
+
+Changelog for 1.13.5
+
+Fixed - Error message when entry variable was set as negative number
+Fixed - Not stripping slashes when reporting an error with magic quotes enabled
+Fixed - Error message when trying to comment with smileys disabled
+
+Changed - Improved international support for the text of the submit and preview buttons
+
+Added - Ability to preview changes made to error box styling
+
+------------------------------------------------
+
+Changelog for 1.13.1
+
+Fixed - Hardcoding of admin url forgot action from email link if not logged in
+Fixed - Comment form would only display the first comment for the entry
+
+Changed - RSS file can now accept 'entry' variable to specify start entry
+Changed - Removed the close window javascript from admin logout
+
+------------------------------------------------
+
+Changelog for 1.13
+
+Fixed - Regression in admin_entry.tpl
+Fixed - If you had a duplicate badword that list would get cut short
+Fixed - Bug in censoring stopping more than one comment showing per entry
+Fixed - captcha.php was always checking headers
+
+Changed - Improved Javascript form checking on entries and comments
+Changed - Moved some Javascript to lazjs file for better caching
+Changed - Now can have badwords to censor, moderate or ban
+Changed - Code used to validate email addresses
+Changed - The way comments are hidden if set to be hidden
+Changed - A number is now displayed to indicate which header failed
+
+Added - Can now style the error box from within style section
+Added - Can now ban ip and unaccept message in easy admin
+Added - Ability to unmask the password in admin login
+
+------------------------------------------------
+
+Changelog for 1.12.2
+
+Fixed - Regression in form.tpl that prevented previews and error messages showing
+Fixed - Regression in some form elements that left form blank after preview/error
+Fixed - Error messages when previewing under some settings
+Fixed - Missed some height/width attributes for icons
+
+Added - Link to Geo IP so you can see where in the world the IP is (Easy Admin)
+
+------------------------------------------------
+
+Changelog for 1.12
+
+Fixed - PHP Notice preventing captcha working on some servers
+Fixed - Restored the htaccess file to keep people out of admin folder
+Fixed - Allowed tags regex is now less greedy
+Fixed - Lazarus was always saying smileys were off on comment form
+Fixed - Unable to use ' in thank you email on some servers
+Fixed - class for entry text now will not get replaced by your CSS
+
+Added - Header checks to try and combat spam
+Added - Wordpress style admin links in easy edit section of admin
+Added - Smilies are now shown in easy admin
+Added - Notification emails now have direct link to entry
+
+Changed - Redesigned admin login form
+Changed - Increased number of characters for allowed HTML tags
+Changed - Default colours used for guestbook
+Changed - Colours used in admin
+Changed - Admin menu is now fixed using CSS instead of Javascript
+Changed - Can now use colour names and transparent for background colour
+Changed - Now get a clearer error message when the MySQL error code is a common one
+Changed - Removed all dimension attributes from images
+
+------------------------------------------------
+
+Changelog for 1.11.2
+
+Fixed - Possible XSS exploit in comment posting (found by endeavormac@gmail.com)
+
+------------------------------------------------
+
+Changelog for 1.11
+
+Fixed - Only one comment showing if censor on view was selected
+Fixed - Entry/comment not being censored on comment with 'censor on display'
+Fixed - Entries weren't being escaped properly for adding to database
+Fixed - Lazarus now handles submit value to HTML entities for better international support
+Fixed - Trying to add a comment to unaccepted post would still show form
+Fixed - Entries/comments not always being slashed/unslashed correctly
+Fixed - Smiley button not displayed if AGCode disabled
+Fixed - Smiley button to left of textarea when Javascript disabled
+Fixed - Captcha now tries png then jpg if gif creation not supported
+Fixed - Still had some table names hard coded using the book_ prefix
+
+Added - Support for displaying gravatars
+Added - Now says on form if email addresses are not displayed
+
+Changed - Changed the order in which the tests are performed on submitted entries.
+Changed - Previews and error messages appear above completed form
+Changed - Webmasters email input can now take up to 200 characters
+Changed - Removed the text version of guests email address from entry
+
+------------------------------------------------
+
+Changelog for 1.10.2
+
+Fixed - Links in PHP Nuke were using ? and not &amp;
+Fixed - Multiline comments in notification email
+Fixed - undefined variable in rss.php
+Fixed - Thumbnail creation works again
+Fixed - Javascript error if AGCode was disabled
+Fixed - "Undefined variable: id" error message when previewing entry with uploaded image
+Fixed - Editted comments not saving on some servers
+
+Added - Output buffering to rss for when you have whitespace in config file
+Added - Link to guestbook in notification emails
+
+Changed - Some code in captcha.php
+Changed - Way buttons are displayed on entry forms due to layout bugs
+Changed - Submit url of admin login is now hard coded in
+
+------------------------------------------------
+
+Changelog for 1.10.1
+
+Fixed - Variable error when viewing entries in admin and PHP error reporting on high
+Fixed - Queries not being correctly formatted on some servers
+
+Added - Output buffering to captcha and admin for when you have whitespace in config file
+
+------------------------------------------------
+
+Changelog for 1.10
+
+Fixed - User pics link in comment form was still old style
+Fixed - User pics in preview not working after changes in 1.9.1
+Fixed - User pics in comment form were not opening via Javascript
+Fixed - Number of entry was weird in permalinks
+Fixed - Comments made via Easy Admin were not returning you to Easy Admin
+Fixed - Images not showing in picture.php when used as PHP Nuke module
+Fixed - User pics in admin still linked to thumbnail if one existed
+Fixed - Javascript for inserting smiley code would always place at the end
+Fixed - Thumbnails of gifs and pngs were not keeping their transparency
+Fixed - Undefined variable: PERMALINK notice on comment form
+Fixed - install.php now checks if database tables exist and are up to date
+
+Added - A message that flash is required if flash not installed
+Added - Flash object tags now converted back to AGCode in email notifications
+Added - Can now request a new captcha image if Javascript is enabled
+Added - Captcha image can now have transparent background
+Added - Added icons for iPhone, Flock and Google Chrome browsers
+Added - Requested URI is now included in MySQL error emails
+Added - Option to use external style sheet when using as include or module
+Added - Preview of what your Ad Block code will look like
+Added - Lightbox functionality to user pics using EnlargeThis!
+Added - Guestbook url so problems with php navigation and module images should be fixed
+Added - Can now view only unaccepted entries in admin
+Added - wmode tag to Flash objects to prevent them hiding EnlargeIt!
+Added - Draggable pop up smiley box
+Added - Ability to resize textareas in admin
+Added - Error handling for when you try to edit a non-existant entry
+Added - Link on success message in case they have Javascript disabled
+
+Changed - Major changes to the layout of the admin section
+Changed - Captcha is now bigger and has wave effects to distort the characters
+Changed - Captcha size can now be changed in General Settings
+Changed - If captcha is set to use greyscale it uses the same grey for everything
+Changed - Captcha image is now a gif due to poor PNG transparency support in IE6
+Changed - Cleaned up some of the browser icons
+Changed - Image used to show guests ip is logged
+Changed - Enlarged textarea for Ad Block
+Changed - Reordered the browser list so that Opera and Flock were correctly identified
+Changed - Admin now always opens in a new window/tab
+Changed - AGCode buttons now use images to look better
+Changed - AGCode buttons don't show if the browser does not support Javascript
+Changed - AGCode function should now be faster and more efficient
+Changed - Tidied up code in image.class.php for efficiency
+Changed - Moved administration link to the footer
+Changed - Removed images from top right link (sign,back,administration)
+Changed - Top right link in permalinks to return to guestbook link
+Changed - Removed search box from permalinks
+Changed - Removed links from top right of admin login
+Changed - Moved a lot of Javascript to an external sheet
+Changed - Moved a lot of admin CSS to an external sheet
+Changed - Timer on success page is now set to 8 seconds instead of 2
+Changed - Method used to redirect guests from success page is now Javascript
+Changed - Removed admin link and "powered by" from success page
+
+------------------------------------------------
+
+Changelog for 1.9.1
+
+Fixed - MySQL query error on trying to save Style
+Fixed - Link to uploaded pic pointed to thumbnail if one existed
+
+------------------------------------------------
+
+Changelog for 1.9
+
+Fixed - Include code was interfering with the style form on submission
+Fixed - Cancelling a post deletion in Easy Admin would still delete the post
+Fixed - Current comment was being included with previous comments in email
+Fixed - Removed all instances of CHDIR function
+Fixed - Minimum post time not disabled if set to 0
+
+Added - Search box can now be styled in Style
+Added - Will now display an error if a template file is missing
+Added - Option to use full YouTube url if YouTube Flash keeps getting 
+        displayed as a link
+Added - Now compares database version against hard coded one and informs
+        you if you need to run smart updater
+Added - Can now set comments so only admin can post them
+Added - Optional permalinks
+        
+Changed - Can now have notifications sent to multiple email addresses
+Changed - include_path is now a constant instead of a variable
+Changed - Table names are now hard coded in
+Changed - Removed list of table names from password section of admin
+
+------------------------------------------------
+
+Changelog for 1.8
+ 
+Fixed - Error message when performing a search that just contained spaces/quotes
+Fixed - Some YouTube urls were not being converted correctly
+Fixed - Javascript now not required for deleting in Easy Admin
+Fixed - FLASH AGCode now respects your maximum image size if set
+Fixed - Some label tags in General Settings not closed
+Fixed - Display order of entries being reversed on some servers
+
+Changed - Some of the security patches
+Changed - Lazarus version number now stored in database
+Changed - General Settings now hides/shows options using javascript
+Changed - How MySQL connection works in attempt to fix MySQL 5 bug
+Changed - You can now replace censored words on saving or on displaying
+Changed - Internal HTML code now outputs XHTML tags
+Changed - Site used to resolve IP addresses
+Changed - Some browser icons to look better on dark pages
+Changed - Notification email for comments to show other comments
+
+Added - Can now display the date as Today and Yesterday if appropriate
+Added - Some error checking to captcha.php
+Added - Can block posts containg to many URLs
+Added - Comment count when hide comments is selected
+Added - You can now add your own fonts to the font file for CAPTCHA to use
+Added - New language lines for use with the Smart Time option
+Added - Can now choose to moderate posts containing censored words
+
+------------------------------------------------
+
+Changelog for 1.7.4
+ 
+Fixed - Undefined index message when editing comments
+Fixed - Error message when doing a large search
+Fixed - Moderation emails not being sent on some servers
+Fixed - Recent security fix may of stopped admin working on PHP Nuke
+Fixed - Look up link for IP addresses in Easy Admin
+Fixed - Search not working when using gbinclude.php
+Fixed - 'Out of range' ICQ error message when using MySQL 5.0.12 and over
+Fixed - Admin links in emails not correct when Lazarus is a Nuke module
+
+Changed - MySQL error emails now come from the admin email address
+Changed - HTML for gender images and comment link are now templates
+Changed - 'Powered by' text is now in a template file
+
+Added - Extra sendmail parameter so emails are sent from correct address
+
+------------------------------------------------
+
+Changelog for 1.7.3
+ 
+Fixed - Cross Site Scripting exploit
+Fixed - Undefined variable error
+
+------------------------------------------------
+
+Changelog for 1.7.2
+ 
+Fixed - Several error notices about undeclared indexes or variables
+Fixed - Admin menu not appearing on some servers.
+
+Changed - Added a hidden .htaccess file to tmp folder due to crappy zip programs
+
+------------------------------------------------
+
+Changelog for 1.7.1
+
+Fixed - Search not working if both comments and image upload disabled
+Fixed - Would go into infinite loop if [flash][/flash] was not linked to a flash file
+
+Changed - Now FLASH AGcode converts YouTube links into the correct url for the file 
+
+------------------------------------------------
+
+Changelog for 1.7
+
+Fixed - Timehash input was producing invalid HTML
+Fixed - Always use admin/book email as from address
+Fixed - Images could still be uploaded even if you had disabled them
+Fixed - Buttons not working on forms after returning from a preview or error
+
+Changed - Improved CAPTCHA generation
+Changed - CAPTCHA now gets it's settings from the database
+Changed - Parts of admin now use your chosen language
+Changed - Easy Admin and Private Messages now use images for options
+Changed - Replaced images with newer ones
+Changed - All emails are now sent in plain text and HTML
+Changed - English will be used for any text that is not in your chosen language file
+Changed - If you disable comments and/or image uploading then neither will be displayed in the guestbook
+          (query optimisation)
+Changed - Removed guestbook image and replaced with admin defined text. HTML is allowed
+Changed - Show/hide comments link text now changes to reflect the current state
+Changed - Captcha now only uses letters to help prevent confusion
+
+Added - Can now accept/unaccept/delete/edit entries and comments from a link in the notification email
+Added - Search function
+Added - Can now have Lazarus remember your login details using a cookie
+Added - Can now request that any uploaded images are attached to notification emails
+Added - Flash AGcode for posting flash from such sites as YouTube.
+
+------------------------------------------------
+
+Changelog for 1.6.1
+
+Fixed - CAPTCHA not working on comments if CAPTCHA options disabled
+
+------------------------------------------------
+
+Changelog for 1.6
+
+Fixed - Some servers not setting correct permissions on uploaded pictures
+Fixed - Font faces with quotes were not displaying properly in admin
+Fixed - Call to undefined function in add.class.php on line 227
+Fixed - Flood check not working unless admin email set
+
+Added - CAPTCHA (image verification) is now an option in anti bot test
+Added - CAPTCHA (image verification) is now an option for comments
+Added - You can now specify an email address for thank you emails to come from
+Added - You can also specify that all notifications to you come from above address
+Added - Can now place an advert anywhere in the guestbook entries
+Added - Legacy support in template loading for people on lazy hosts
+Added - Can now delete/accept/unaccept multiple entries in Easy Admin
+Added - Homepage is now checked for censored words
+Added - [img] agcode now resizes the image if it is to large
+Added - EMAIL AGcode is now optional
+Added - You can now disable the ability to add comments
+Added - Time delay/limit to comment form
+
+Changed - Email format validation
+Changed - Code changes for speed up
+Changed - Base url is now stored in database fo reasy setting/changing
+Changed - Installer and Smartupdater are now a single file, install.php
+
+------------------------------------------------
+
+Changelog for 1.5.5
+
+Fixed exploit in picture.php
+Fixed exploit in code-LANG.php files
+
+------------------------------------------------
+
+Changelog for 1.5.4
+
+Fixed - Some servers not setting correct permissions on uploaded pictures
+Fixed - Undefined variable row message on preview
+Fixed - Link to full size user image no longer needs javascript
+Fixed - Uploaded BMPs not getting added to the entry
+Fixed - Yahoo had changed url for online/offline smiley
+
+Added - Word censoring can now be set to block posts containing bad words
+
+Changed - IP getting function to better detect proxy types
+Changed - Rewrote word censoring to be faster
+
+------------------------------------------------
+
+Changelog for 1.5.3
+
+Fixed - 'Out of range' ICQ error message when using MySQL 5.0.12 and over
+Fixed - Include code for gbinclude.php file not showing correctly on some servers
+Fixed - 'Undefined variable: rid' error messge in easy admin
+Fixed - Text colouring for private message option now matches rest of form
+Fixed - Integrated the PHP 4.4.1 patch files
+Fixed - Was not returning to correct page when accepting comments
+Fixed - Opera (stupid browser) reported an error when editing posts with long user agents
+Fixed - Can now use single characters in email domains if it is a sub domain
+        (ie here@x.test.com will work but here@x.com will not)
+Fixed - Time displayed in Easy Admin now obeys your time offset 
+Fixed - Had & in yahoo template instead of &       
+
+Added - Pagination on the index page
+Added - AGCode buttons to put the AGcode into the message
+Added - Comment table is now indexed for faster loading
+Added - Can now unaccept posts so they show in easy admin but not guestbook
+Added - Unaccepted posts and comments now have pink background in Easy Admin
+
+Changed - Reworded the email field options in Admin - General Settings
+
+Removed - The Allowed HTML and Allowed AGCode text
+
+------------------------------------------------
+
+Changelog for 1.5.2
+
+Fixed - Admin log in form not showing in PHP Nuke
+Fixed - Unable to login using non alphanumeric characters in PHP Nuke
+Fixed - picture.php no longer reports an error if img variable left empty
+
+Changed - Easy admin now returns to the page you were viewing after performing an action
+
+------------------------------------------------ 
+
+Changelog for 1.5.1
+
+Fixed - Requiring an email address could be bypassed with a space
+Fixed - AGcode messed up if tags where stacked
+Fixed - Couldn't use a double quote (") in bot test question
+Fixed - Comments were not using your specified text colour
+
+Added - Charset to HTML emails so that non English characters are displayed correctly in email clients.
+Added - Can now ban an IP and delete a post at the same time in easy admin
+Added - .htaccess file so that pages are sent using gzip compression
+Added - International Date Format as an option
+Added - Option to have comments hidden with a link to make them appear
+Added - You can now add text to the password input of comment form
+Added - Charset is now set in General Settings
+Added - Email addresses can now be hidden in entries
+
+Changed - Gone back to using the emotion of a smiley for the alt text and not the smiley code
+Changed - Code for checking if an IP is banned is now faster and uses less CPU time
+Changed - Image uploading now even works when server is in safe mode
+Changed - Email addresses are now checked for bad words
+Changed - Removed the storeasip option
+Changed - Both hostname and IP are stored for every post
+Changed - Antispam word is now stored in database and randomly generated
+Changed - Comment notification emails now contain the guestbook entry that has been commented on
+Changed - Templating system has been overhauled to make it only use one set of files
+Changed - All fields except name and message are optional.
+Changed - Version number is now only shown in admin section.
+
+----------------------------------------------
+
+Changelog for 1.4
+
+Fixed - Bad word filtering when regex is not selected
+Fixed - I had used the admin password page from my demo version
+Fixed - Added title attribute to gender images
+Fixed - Some images were using the /> XHTML ending
+Fixed - Email encryption used on Comment form and entry preview was different from the main version
+Fixed - YAHOO and AGENT being undeclared (only on servers where PHP error reporting is set to high)
+Fixed - Jump to not working in easy admin
+
+Added - Javascript confirmation box when deleting anything via easy admin
+Added - Comments for an entry now appear in the comment form with the entry
+Added - Text for the MSN, Yahoo and Skype links in entries now in language files
+Added - Anti bot test is now indicated as a required field
+Added - Homepage URL is now a link in easy admin and private messages
+Added - IP's in easy admin can be clicked to resolve the IP to the owner
+Added - Hostnames in Easy Admin can be clicked to get the IP for them
+Added - Email addresses posted using AGCode are now encrypted.
+Added - You can now use [NAME] in thank you emails to have the posters name put at that point.
+
+Changed - URL's in posts now only display the domain of the link whilst still linking to the full url.
+Changed - Comments are now checked for bad words before being checked for AGCode and URL's
+Changed - Comment success message now uses success.php template
+Changed - All information from a submitted entry is sent to the webmaster if notifications active
+Changed - Wording of the Thank You email section of Admin
+
+----------------------------------------------
+
+Changelog for 1.3
+
+Fixed - No alt tag when [img][/img] used to display an image
+Fixed - HTML entities in from address of new post notifications
+Fixed - Complete overhaul of the install.php file
+Fixed - Font sizes for some items in addentry form
+Fixed - Typo in top logout link on style page of admin (only where PHP error reporting is set to high)
+Fixed - Undefined variable when trying to accept a post (only where PHP error reporting is set to high)
+Fixed - undefined variable use_regex (only on servers where PHP error reporting is set to high)
+
+Added - Guestbook now uses UTF-8 character set for better international support even in admin
+Added - Skype field
+
+Changed - Thumbnail creation updated to improve thumbnal quality
+Changed - Uploaded images in entries now use float:left; for better appearance.
+Changed - Improved encryption of text email in entries.
+
+----------------------------------------------
+
+Changelog for 1.2.1
+
+Fixed - Closing quote of alt attribute for smileys.
+Fixed - Rough edge around Firefox, IE and Mozilla browser icons.
+
+Added - Can now use bmps for smileys.
+
+Changed - Switched from using ereg_replace to using str_replace in template loading
+Changed - Switched from using an array to strtr when previewing
+
+---------------------------------------------
+
+Changelog for 1.2
+
+Fixed - Smileys not working on forms
+Fixed - bottest not working when used as a module
+
+Added - Time check on entries to help fight spam
+Added - Time display in Admin - Style to display time on server and your time
+
+---------------------------------------------
+
+Changelog for 1.1
+
+Fixed - Emails to admin were all on one line
+Fixed - Forgot to get the information in gbinclude when globals are turned off
+
+Added - Browser detect whereby the appropriate browser icon is displayed
+Added - Clickable browsers in pop up smileys window
+Added - Picture Upload is now disabled unless you have made the folders writable
+Added - Templates state if they are editable or not in Admin section
+Added - Duplicated jump links in easy admin so they are at the top and bottom
+
+Changed - Rearranged layout of the name section of entries
+Changed - MSN icon is now a link to the users MSN profile
+Changed - MSN icon is now MSN butterfly
+Changed - Cleaner AIM icon
+Changed - Smiley pop up only shows smileys and AGcode link shows the AGcode if it is on
+
+Some things I probably have forgotten about as well

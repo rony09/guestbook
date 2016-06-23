@@ -1,0 +1,1 @@
+&nbsp;<img src="$GB_PG[base_url]/img/female.gif" width="12" height="12" alt="$LANG[FormFemale]" title="$LANG[FormFemale]">

@@ -1,0 +1,1 @@
+&nbsp;<img src="$GB_PG[base_url]/img/male.gif" width="12" height="12" alt="$LANG[FormMale]" title="$LANG[FormMale]">

@@ -1,0 +1,554 @@
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Anti Spam Stuff
+
+ order allow,deny
+ # Rackspace
+ deny from 5.79.0.0/18
+ deny from 31.222.128.0/18
+ deny from 37.188.96.0/19
+ deny from 46.38.160.0/19
+ deny from 50.28.192.0/22
+ deny from 50.56.0.0/15
+ deny from 64.39.0.0/19
+ deny from 64.49.192.0/18
+ deny from 65.61.128.0/18
+ deny from 66.216.64.0/18
+ deny from 67.23.0.0/19
+ deny from 67.23.32.0/20
+ deny from 67.192.0.0/16
+ deny from 67.207.128.0/19
+ deny from 69.20.0.0/17
+ deny from 72.3.128.0/17
+ deny from 72.4.112.0/20
+ deny from 72.32.0.0/16
+ deny from 74.91.84.0/22
+ deny from 74.91.88.0/21
+ deny from 74.123.152.0/22
+ deny from 74.205.0.0/17
+ deny from 78.136.0.0/18
+ deny from 83.138.128.0/18
+ deny from 89.234.0.0/18
+ deny from 91.227.208.0/24
+ deny from 92.52.64.0/18
+ deny from 94.236.0.0/17
+ deny from 95.138.128.0/18
+ deny from 98.129.0.0/16
+ deny from 103.28.40.0/22
+ deny from 108.166.0.0/17
+ deny from 108.171.160.0/19
+ deny from 134.8.0.0/24
+ deny from 134.8.2.0/24
+ deny from 164.177.128.0/19
+ deny from 166.78.112.0/20
+ deny from 173.45.224.0/19
+ deny from 173.203.0.0/16
+ deny from 174.143.0.0/16
+ deny from 175.107.191.0/24
+ deny from 184.106.0.0/16
+ deny from 192.204.40.0/21
+ deny from 193.142.244.0/24
+ deny from 198.61.128.0/17
+ deny from 198.101.128.0/17
+ deny from 198.184.18.0/24
+ deny from 199.15.212.0/22
+ deny from 199.91.52.0/23
+ deny from 199.187.164.0/22
+ deny from 199.241.120.0/21
+ deny from 203.55.21.0/24
+ deny from 204.232.128.0/17
+ deny from 205.166.177.0/24
+ deny from 206.188.192.0/19
+ deny from 207.32.116.0/24
+ deny from 207.71.8.0/24
+ deny from 207.71.44.0/23
+ deny from 207.97.192.0/18
+ deny from 207.235.4.0/22
+ deny from 207.235.16.0/23
+ deny from 208.78.96.0/21
+ deny from 209.20.64.0/19
+ deny from 209.61.128.0/18
+ deny from 209.114.32.0/19
+ deny from 209.163.232.0/21
+ deny from 209.163.244.0/22
+ deny from 209.163.248.0/22
+ deny from 209.216.104.0/21
+ deny from 212.64.128.0/19
+ deny from 216.18.144.0/21
+ deny from 216.105.48.0/20
+ deny from 216.110.32.0/20
+ # OVH Hosting
+ deny from 5.39.0.0/17
+ deny from 5.135.0.0/16
+ deny from 8.7.244.0/24
+ deny from 8.18.128.0/24
+ deny from 8.18.136.0/21
+ deny from 8.18.172.0/24
+ deny from 8.20.110.0/24
+ deny from 8.21.41.0/24
+ deny from 8.24.8.0/21
+ deny from 8.26.94.0/24
+ deny from 8.29.224.0/24
+ deny from 8.30.208.0/21
+ deny from 8.33.96.0/21
+ deny from 8.33.128.0/21
+ deny from 8.33.136.0/23
+ deny from 31.201.128.0/17
+ deny from 37.49.226.0/23
+ deny from 37.59.0.0/16
+ deny from 37.60.48.0/20
+ deny from 37.187.0.0/16
+ deny from 37.222.0.0/15
+ deny from 46.105.0.0/16
+ deny from 62.245.0.0/19
+ deny from 87.98.128.0/17
+ deny from 87.253.232.0/24
+ deny from 91.90.88.0/21
+ deny from 91.121.0.0/16
+ deny from 91.218.204.0/22
+ deny from 94.23.0.0/16
+ deny from 103.5.12.0/22
+ deny from 109.190.0.0/16
+ deny from 142.4.192.0/19
+ deny from 176.31.0.0/16
+ deny from 178.32.0.0/15
+ deny from 178.236.224.0/20
+ deny from 185.7.240.0/22
+ deny from 185.10.17.0/24
+ deny from 185.12.32.0/23
+ deny from 188.165.0.0/16
+ deny from 192.95.0.0/18
+ deny from 192.99.0.0/16
+ deny from 193.84.187.0/24
+ deny from 193.104.19.0/24
+ deny from 193.104.56.0/24
+ deny from 193.109.63.0/24
+ deny from 193.200.52.0/23
+ deny from 194.50.82.0/24
+ deny from 195.43.138.0/24
+ deny from 195.60.164.0/23
+ deny from 195.110.30.0/23
+ deny from 195.246.232.0/23
+ deny from 195.246.254.0/23
+ deny from 198.27.64.0/18
+ deny from 198.50.128.0/17
+ deny from 198.100.144.0/20
+ deny from 198.245.48.0/20
+ deny from 213.186.32.0/19
+ deny from 213.251.128.0/18
+ # Nobis Tech / Ubiquity
+ deny from 23.19.0.0/16
+ deny from 64.64.224.0/19
+ deny from 64.79.96.0/20
+ deny from 64.87.32.0/19
+ deny from 67.58.96.0/20
+ deny from 64.120.0.0/17
+ deny from 64.250.144.0/20
+ deny from 66.207.167.0/20
+ deny from 67.201.0.0/21
+ deny from 67.201.40.0/24
+ deny from 67.201.48.0/23
+ deny from 67.230.160.0/19
+ deny from 68.168.128.0/20
+ deny from 69.25.250.0/23
+ deny from 69.31.104.0/22
+ deny from 69.147.224.0/19
+ deny from 69.174.60.0/22
+ deny from 70.32.32.0/20
+ deny from 70.32.43.0/24
+ deny from 70.32.48.0/24
+ deny from 74.82.192.0/19
+ deny from 74.117.236.0/22
+ deny from 74.119.216.0/22
+ deny from 74.121.180.0/22
+ deny from 74.122.192.0/21
+ deny from 86.104.211.0/24
+ deny from 89.40.36.0/23
+ deny from 89.42.31.0/24
+ deny from 95.64.46.0/24
+ deny from 96.45.176.0/20
+ deny from 108.62.0.0/16
+ deny from 108.62.240.0/22
+ deny from 142.91.0.0/16
+ deny from 147.255.0.0/16
+ deny from 173.208.0.0/17
+ deny from 173.234.0.0/16
+ deny from 173.243.112.0/20
+ deny from 174.34.128.0/18
+ deny from 174.137.48.0/20
+ deny from 199.167.196.0/22
+ deny from 199.192.200.0/21
+ deny from 208.100.62.0/23
+ deny from 216.6.224.0/20
+ deny from 216.86.152.0/21
+ deny from 216.135.112.0/21
+ deny from 216.193.237.0/24
+ deny from 216.231.128.0/20
+ # jijikserver 
+ deny from 31.184.238.0/24
+ # Some server farm
+ deny from 31.214.133.0/24
+ # Nconnect
+ deny from 46.17.96.0/21
+ deny from 195.162.68.0/23
+ deny from 91.210.104.0/22 
+ # Hostkey
+ deny from 46.17.100.0/24
+ # Leaseweb leaseweb.com/leaseweb.de
+ deny from 46.165.192.0/18
+ deny from 85.17.97.0/24
+ # FDC Servers
+ deny from 50.7.0.0/16
+ # SAS France
+ deny from 62.210.0.0/16
+ deny from 195.154.0.0/16
+ # Tummy tummy.com
+ deny from 66.35.48.0/24
+ # EI Catalyst
+ deny from 66.96.16.0/20
+ # Steadfast hosting
+ deny from 67.202.64.0/18
+ # Singlehop
+ deny from 67.212.160.0/19
+ deny from 99.198.96.0/19
+ deny from 108.163.192.0/18
+ # EGI Hosting
+ deny from 68.68.96.0/24
+ # Xeex Communications xeex.com
+ deny from 8.0.0.0/8
+ deny from 63.216.0.0/14
+ deny from 63.220.0.0/15
+ deny from 64.152.0.0/13
+ deny from 69.26.160.0/19
+ deny from 72.34.96.0/20
+ deny from 108.179.64.0/18
+ deny from 113.212.64.0/19
+ deny from 163.182.0.0/16
+ deny from 173.231.192.0/18
+ deny from 173.249.192.0/18
+ deny from 198.13.96.0/19
+ deny from 198.16.64.0/18
+ deny from 199.255.236.0/22
+ deny from 205.177.0.0/16
+ deny from 205.252.0.0/16
+ deny from 206.161.0.0/16
+ deny from 207.176.0.0/17
+ deny from 207.226.0.0/16
+ deny from 209.159.128.0/20
+ deny from 209.242.192.0/19
+ deny from 216.151.128.0/19
+ deny from 216.152.240.0/20
+ deny from 216.156.0.0/16
+ # Limestone Networks
+ deny from 63.143.32.0/19
+ deny from 64.31.0.0/18
+ deny from 69.162.64.0/18
+ deny from 74.63.192.0/18
+ deny from 208.115.192.0/18
+ deny from 216.144.240.0/20
+ deny from 216.245.192.0/19
+ # GoDaddy
+ deny from 72.167.0.0/16
+ # These two are for Layeredtech. Well known friend to spammers.
+ deny from 72.232.0.0/16
+ deny from 72.233.0.0/17
+ # VolumeDrive
+ deny from 74.118.192.0/22
+ deny from 199.19.104.0/21
+ # Wowrack
+ deny from 74.121.184.0/21
+ deny from 192.34.108.0/22
+ deny from 208.115.113.80/28
+ deny from 216.244.64.0/19
+ # BlueMileNetworks bluemilenetworks.com
+ deny from 76.10.192.0/19
+ # Chaos Computer Club ccc.de
+ deny from 80.237.226.72/29
+ # Rapid Switch rapidswitch.com
+ deny from 83.142.224.0/21
+ # Plusserver.de
+ deny from 85.25.95.0/24
+ # Keyweb.de servers. Plenty of spam attempts from them
+ deny from 87.118.96.0/19
+ deny from 89.185.88.0/24
+ deny from 89.209.0.0/16
+ deny from 91.196.60.0/22
+ deny from 173.224.208.0/20
+ # ProXad network
+ deny from 88.160.0.0/11
+ # vhoster
+ deny from 91.200.12.0/22
+ # Altushost.com
+ deny from 91.214.44.0/22
+ deny from 79.142.64.0/20
+ # Steephost
+ deny from 91.207.4.0/22
+ deny from 91.207.8.0/23
+ deny from 195.190.13.0/24
+ # VPS Hosting
+ deny from 91.226.32.0/23
+ # Hosteam
+ deny from 91.216.191.0/24
+ # Hoster24
+ deny from 92.241.184.0/25
+ # Heichi
+ deny from 92.241.190.0/24
+ # Gigahosting giga-hosting.biz
+ deny from 93.104.208.0/21
+ # King Servers 
+ deny from 94.100.25.0/24
+ deny from 94.100.31.0/24
+ # Ecatel Dedicated Servers
+ deny from 94.102.57.0/22
+ # buyurl.net
+ deny from 94.242.192.0/18
+ # Server United
+ deny from 94.249.152.0/23
+ # Inforcenter - RU
+ deny from 95.129.163.0/24
+ # Server Connect serverconnect.se
+ deny from 95.143.193.0/23
+ # OC3 Networks
+ deny from 96.44.128.0/18
+ # GoDaddy
+ deny from 97.74.0.0/16
+ # Choopa
+ deny from 108.61.0.0/16
+ # Thrust VPS
+ deny from 109.169.64.0/19
+ # XSServer.eu
+ deny from 46.251.224.0/20
+ deny from 109.230.192.0/20
+ deny from 109.230.213.0/24
+ deny from 109.230.216.0/23
+ deny from 109.230.220.0/22
+ deny from 109.230.246.0/24
+ deny from 109.230.251.0/24
+ # Webexxpurts
+ deny from 5.34.246.0/23
+ deny from 37.72.184.0/22
+ deny from 46.29.252.0/22
+ deny from 130.185.156.0/22
+ deny from 151.237.189.0/22
+ deny from 176.61.140.0/22
+ deny from 206.246.84.0/22
+ deny from 207.199.144.0/22
+ deny from 207.199.156.0/22
+ deny from 207.199.188.0/22
+ deny from 209.147.72.0/23
+ deny from 216.107.22.0/23
+ deny from 216.107.41.0/24
+ deny from 216.155.4.0/22
+ # Incero.com
+ deny from 23.29.112.0/20
+ # Peg Tech Inc
+ deny from 50.60.0.0/15
+ deny from 63.140.0.0/21
+ deny from 65.98.0.0/17
+ deny from 65.181.64.0/18
+ deny from 69.57.160.0/19
+ deny from 69.72.128.0/17
+ deny from 69.168.232.0/24
+ deny from 69.194.192.0/23
+ deny from 69.194.196.0/24
+ deny from 69.194.198.0/23
+ deny from 69.194.200.0/24
+ deny from 69.194.202.0/24
+ deny from 69.194.204.0/23
+ deny from 100.42.51.0/24
+ deny from 100.42.52.0/22
+ deny from 100.42.56.0/22
+ deny from 100.42.60.0/23
+ deny from 100.42.62.0/24
+ deny from 109.169.62.0/23
+ deny from 109.169.72.0/23
+ deny from 109.169.80.0/23
+ deny from 137.175.0.0/17
+ deny from 142.0.128.0/20
+ deny from 142.4.96.0/19
+ deny from 192.55.203.0/24
+ deny from 192.74.224.0/19
+ deny from 198.2.192.0/18
+ deny from 198.200.32.0/19
+ deny from 206.209.48.0/20
+ deny from 208.116.0.0/18
+ deny from 209.140.128.0/18
+ deny from 212.38.160.0/21
+ deny from 216.67.224.0/19
+ deny from 216.74.96.0/19
+ # Nlayer
+ deny from 66.171.224.0/20
+ deny from 69.22.184.0/24
+ deny from 198.144.96.0/19
+ # Hostwinds
+ deny from 142.11.192.0/18
+ # Softlayer.com
+ deny from 173.192.0.0/15
+ # Hosting Services
+ deny from 173.193.221.24/29
+ # Colocation servers colo4dallas.com
+ deny from 173.208.0.0/17
+ deny from 173.246.32.0/19
+ deny from 174.136.0.0/18
+ # Interserver
+ deny from 173.214.160.0/20
+ # VolumeDrive volumedrive.com
+ deny from 173.242.112.0/20
+ deny from 204.124.180.0/22
+ # tor servers
+ deny from 174.36.199.200/29
+ # Iweb Hosting
+ deny from 174.142.0.0/16
+ # Secured Servers
+ deny from 184.171.160.0/20
+ deny from 198.15.64.0/18
+ # LeonLundberg
+ deny from 188.143.232.0/24
+ # dedicatedservercontact.com
+ deny from 188.227.166.152/29
+ # Datashack US / Wholesale Internet
+ deny from 63.141.224.0/19
+ deny from 69.197.185.0/24
+ deny from 74.91.16.0/20
+ deny from 142.54.160.0/19
+ deny from 173.208.128.0/17
+ deny from 192.151.144.0/20
+ deny from 192.187.96.0/19
+ deny from 198.204.224.0/19
+ deny from 199.168.96.0/21
+ # Croatian Academic and Research Network
+ deny from 193.198.207.0/26
+ # Dragonara.net just started getting spam attempts from them
+ deny from 194.8.74.0/23
+ deny from 195.2.240.99
+ # enzu.com
+ deny from 198.56.128.0/17
+ # Applied Ops
+ deny from 199.48.144.0/22
+ # various
+ deny from 91.201.64.0/22
+ deny from 188.92.75.0/24
+ deny from 195.191.54.0/23
+ # BlutMagie
+ deny from 192.251.226.0/24
+ # IP Strada
+ deny from 199.15.232.0/21
+ # 5 Nines
+ deny from 208.66.128.0/21
+ # Netelligent netelligent.ca
+ deny from 68.71.32.0/19
+ deny from 209.44.96.0/19
+ # Trit Networks trit.net
+ deny from 209.159.128.0/20
+ # Altuhost altushost.com
+ deny from 213.5.64.0/21
+ # Idealhosting / Buyurl
+ deny from 213.238.168.0/21
+ # Omega Microsystems omsi.net
+ deny from 216.86.61.0/24
+ # Hurricane Electric he.net
+ deny from 27.50.32.0/21
+ deny from 31.148.219.0/24
+ deny from 37.16.72.0/21
+ deny from 50.116.0.0/20
+ deny from 64.62.128.0/17
+ deny from 64.71.128.0/18
+ deny from 65.19.128.0/18
+ deny from 65.49.0.0/17
+ deny from 66.160.128.0/18
+ deny from 66.175.216.0/21
+ deny from 66.178.176.0/20
+ deny from 66.220.0.0/19
+ deny from 67.43.55.0/24
+ deny from 68.64.168.0/22
+ deny from 70.35.16.0/21
+ deny from 67.43.55.0/24
+ deny from 72.52.64.0/18
+ deny from 74.82.0.0/18
+ deny from 74.121.104.0/22
+ deny from 74.207.240.0/20
+ deny from 96.126.96.0/21
+ deny from 103.22.244.0/22
+ deny from 135.0.128.0/17
+ deny from 148.51.0.0/16
+ deny from 156.39.0.0/16
+ deny from 173.46.80.0/20
+ deny from 173.230.144.0/20
+ deny from 173.255.208.0/20
+ deny from 173.255.240.0/20
+ deny from 184.75.240.0/22
+ deny from 184.104.0.0/15
+ deny from 192.52.69.0/24
+ deny from 192.69.224.0/20
+ deny from 192.88.99.0/24
+ deny from 192.132.94.0/24
+ deny from 192.136.112.0/24
+ deny from 192.155.80.0/21
+ deny from 192.156.200.0/24
+ deny from 192.171.110.0/24
+ deny from 193.142.62.0/24
+ deny from 198.74.48.0/22
+ deny from 192.88.99.0/24
+ deny from 198.102.73.0/24
+ deny from 198.167.232.0/21
+ deny from 199.4.150.0/24
+ deny from 199.16.197.0/24
+ deny from 199.26.178.0/24
+ deny from 199.30.48.0/21
+ deny from 199.36.72.0/21
+ deny from 199.79.202.0/24
+ deny from 199.83.48.0/24
+ deny from 199.88.158.0/24
+ deny from 199.114.240.0/21
+ deny from 199.115.144.0/22
+ deny from 199.115.178.0/24
+ deny from 199.119.88.0/21
+ deny from 199.167.132.0/22
+ deny from 199.192.152.0/21
+ deny from 199.193.64.0/21
+ deny from 199.233.90.0/24
+ deny from 199.233.198.0/23
+ deny from 199.245.105.0/24
+ deny from 202.9.83.0/24
+ deny from 203.23.194.0/24
+ deny from 203.99.142.0/24
+ deny from 203.142.14.0/23
+ deny from 203.142.26.0/24
+ deny from 204.140.21.0/20
+ deny from 205.159.239.0/24
+ deny from 205.166.121.0/24
+ deny from 206.108.49.0/21
+ deny from 206.144.144.0/20
+ deny from 207.45.69.0/24
+ deny from 207.89.0.0/17
+ deny from 208.78.35.0/24
+ deny from 208.81.165.0/24
+ deny from 208.142.248.0/21
+ deny from 209.51.160.0/19
+ deny from 209.150.160.0/19
+ deny from 209.209.22.0/19
+ deny from 216.66.0.0/19
+ deny from 216.66.0.0/17
+ deny from 216.75.229.0/24
+ deny from 216.75.236.0/23
+ deny from 216.151.156.0/23
+ deny from 216.171.201.0/19
+ deny from 216.218.128.0/17
+ deny from 216.224.64.0/19
+ deny from 216.224.64.0/21
+ # psychz.net
+ deny from 216.99.144.0/20
+ allow from all
+
+SetEnvIfNoCase User-Agent "^libwww-perl*" spammer=yes
+SetEnvIfNoCase User-Agent "^Mozilla/5\.0$" spammer=yes
+SetEnvIfNoCase User-Agent "^Java/1*" spammer=yes
+SetEnvIfNoCase User-Agent "^USERAGENT$" spammer=yes
+
+deny from env=spammer
+
+# End Anti Spam Stuff
+

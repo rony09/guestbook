@@ -1,0 +1,28 @@
+Lazarus Guestbook
+By Stewart Souter
+URL: http://carbonize.co.uk
+Advanced Guestbook 2.3.x (PHP/MySQL)
+Copyright (c)2001 Chi Kien Uong
+URL: http://www.proxy2.de
+
+Requirements:
+
+  - MySQL 3.22.x or higher
+  - PHP 5.2.x or higher
+
+
+
+Updating:
+
+1. Make a backup of your current guestbook files and if you know how the database.
+
+2. Upload these files to your guestbook folder replacing the current ones.
+
+3. Visit install.php in your web browser and choose update.
+
+4. Delete the install.php file.
+
+
+
+There is no config.inc.php file in this update as you should alrready have one containing your database information.
+

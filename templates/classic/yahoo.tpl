@@ -1,0 +1,1 @@
+<a href="http://profiles.yahoo.com/$row[yahoo]" target="_blank"><img src="$GB_PG[base_url]/img/ym.gif" alt="Yahoo!" title="$LANG[AltYahoo]" border="0"><img src="http://opi.yahoo.com/online?u=$row[yahoo]" alt="Yahoo!" title="$LANG[AltYahoo]" border="0"></a>
