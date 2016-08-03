@@ -1,10 +1,15 @@
 # PHP guestbook
 
 Lazarus Guestbook
+
 By Stewart Souter
+
 URL: http://carbonize.co.uk
+
 Advanced Guestbook 2.3.x (PHP/MySQL)
+
 Copyright (c)2001 Chi Kien Uong
+
 URL: http://www.proxy2.de
 
 Requirements:
